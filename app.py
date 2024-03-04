@@ -19,5 +19,9 @@ def get_quotes_for_category():
     return render_template('index.html', category=CATEGORIES, quotes=quotes)
 
 
+
+
+
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()

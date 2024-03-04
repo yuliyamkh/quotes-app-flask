@@ -11,16 +11,13 @@
         <p>{{ message }}</p>
     {% endfor %}
     <div id="buttons">
-        <form action="/get_quotes" method="POST">
-            <div class="button-row">
-                {% for category in categories %}
-                    <button type="submit" name="category">{{ category }}</button>
-                    {% if loop.index % 5 == 0 %}
-                        </div><div class="button-row">
-                    {% endif %}
-                {% endfor %}
-            </div>
-        </form>
+        <div class="button-row">
+            {% for category in categories %}
+                <form class="category-form" action="/get_quotes" method="POST">
+                    <button type="submit" name="category" value="{{ category }}">{{ category }}</button>
+                </form>
+            {% endfor %}
+        </div>
     </div>
     <div id="quotes">
         {% if quotes %}

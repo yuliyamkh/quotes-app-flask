@@ -23,3 +23,8 @@ button:hover {
     background-color: #f8f9fa; /* Quote background color */
     border-radius: 5px; /* Rounded corners */
 }
+
+.category-form {
+    display: inline-flex;
+    padding: 5px;
+}
