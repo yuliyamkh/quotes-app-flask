@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Your Favorite Quotes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <h1>Find Quotes to Your Favorite Topics!</h1>
+    {% for message in get_flashed_messages() %}
+        <p>{{ message }}</p>
+    {% endfor %}
+    <div id="buttons">
+        <form action="/get_quotes" method="POST">
+            <div class="button-row">
+                {% for category in categories %}
+                    <button type="submit" name="category">{{ category }}</button>
+                    {% if loop.index % 5 == 0 %}
+                        </div><div class="button-row">
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </form>
+    </div>
+    <div id="quotes">
+        {% if quotes %}
+            <ul>
+                {% for quote in quotes %}
+                    <li>{{ quote }}</li>
+                {% endfor %}
+            </ul>
+            <!-- Button to return to the start page -->
+            <a href="/">Back to Categories</a>
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.button-row {
+    margin-bottom: 10px;
+}
+
+#quotes ul li {
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 10px; /* Add space between quotes */
+    background-color: #f8f9fa; /* Quote background color */
+    border-radius: 5px; /* Rounded corners */
+}
