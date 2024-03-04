@@ -15,7 +15,7 @@ def index():
 def get_quotes_for_category():
     category = request.form['category']
     quotes = get_quotes(category)
-    flash("Quotes:")
+    flash(f'{str(category).capitalize()} Quotes:')
     return render_template('index.html', category=CATEGORIES, quotes=quotes)
 
 
