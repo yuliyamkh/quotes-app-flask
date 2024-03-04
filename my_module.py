@@ -8,4 +8,4 @@ CATEGORIES = [c for c in DATA.Category.unique().tolist() if c and c != 'quotes']
 def get_quotes(category: str) -> List:
 
     quotes = DATA.loc[DATA['Category'] == category, 'Quote'].sample(n=10)
-    return quotes.tolist(
+    return quotes.tolist()
